@@ -47,8 +47,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'jbuilder'
-copyright = '2017, Jérémie Dimino'
-author = 'Jérémie Dimino'
+copyright = '2017, Jeremie Dimino'
+author = 'Jeremie Dimino'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -128,7 +128,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'jbuilder.tex', 'jbuilder Documentation',
-     'Jérémie Dimino', 'manual'),
+     'Jeremie Dimino', 'manual'),
 ]
 
 
