@@ -1,6 +1,6 @@
-************************
-``jbuild`` specification
-************************
+********************
+jbuild specification
+********************
 
 ``jbuild`` files are the main part of Jbuilder, and are the origin of
 its name. They are used to describe libraries, executables, tests, and
@@ -25,14 +25,14 @@ Stanzas
 
 The following sections describe the available stanzas and their meaning.
 
-``jbuild_version``
-------------------
+jbuild_version
+--------------
 
 ``(jbuild_version 1)`` specifies that we are using the version 1 of
 the Jbuilder metadata format in this ``jbuild`` file.
 
-``library``
------------
+library
+-------
 
 The ``library`` stanza must be used to describe OCaml libraries. The
 format of library stanzas is as follows:
@@ -173,8 +173,8 @@ easily with
 using ``(c_flags (:include ...))`` and
 ``(c_library_flags (:include ...))``.
 
-``executable``
---------------
+executable
+----------
 
 The ``executable`` stanza must be used to describe an executable. The
 format of executable stanzas is as follows:
@@ -237,8 +237,8 @@ such you can always rely on ``<name>.exe`` being available.
 -  ``flags``, ``ocamlc_flags`` and ``ocamlopt_flags``. See the
    *section about specifying OCaml flags*
 
-``executables``
----------------
+executables
+-----------
 
 The ``executables`` stanza is the same as the ``executable`` stanza,
 except that it is used to describe several executables sharing the
@@ -256,8 +256,8 @@ instead of ``(name ...)`` and ``(public_name ...)`` you must use:
    same length as the list in the ``(names ...)`` field. Moreover you
    can use ``-`` for executables that shouldn't be installed
 
-``rule``
---------
+rule
+----
 
 The ``rule`` stanza is used to create custom user rules. It tells
 Jbuilder how to generate a specific set of files from a specific set
@@ -286,8 +286,8 @@ currently don't support patterns, such as a rule to produce ``%.y``
 from ``%.x`` for any given ``%``. This might be supported in the
 future.
 
-``ocamllex``
-------------
+ocamllex
+--------
 
 ``(ocamllex (<names>))`` is essentially a shorthand for:
 
@@ -298,8 +298,8 @@ future.
        (deps    (<name>.mll))
        (action  (chdir ${ROOT} (run ${bin:ocamllex} -q -o ${<})))))
 
-``ocamlyacc``
--------------
+ocamlyacc
+---------
 
 ``(ocamlyacc (<names>))`` is essentially a shorthand for:
 
@@ -310,8 +310,8 @@ future.
        (deps    (<name>.mly))
        (action  (chdir ${ROOT} (run ${bin:ocamlyacc} ${<})))))
 
-``menhir``
-----------
+menhir
+------
 
 The basic form for defining menhir parsers (analogous to ocamlyacc) is:
 
@@ -338,8 +338,8 @@ Extra flags can be passed to menhir using the ``flags`` flag:
      ((flags (<option1> <option2> ...))
       (modules (<parser1> <parser2> ...))))
          
-``alias``
----------
+alias
+-----
 
 The ``alias`` stanza lets you add dependencies to an alias, or specify an action
 to run to construct the alias.
@@ -384,8 +384,8 @@ from the opam file using a ``build-test`` field, then all your ``runtest`` alias
 stanzas should have a ``(package ...)`` field in order to partition the set of
 tests.
 
-``install``
------------
+install
+-------
 
 The ``install`` stanza is what lets you describe what Jbuilder should install,
 either when running ``jbuilder install`` or through opam.

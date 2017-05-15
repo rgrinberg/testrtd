@@ -2,9 +2,9 @@
 Quickstart
 **********
 
-This document gives simple usage examples of Jbuilder. You can also look
-at `file:../example <../example>`__ for complete examples of projects
-using Jbuilder.
+This document gives simple usage examples of Jbuilder. You can also look at
+`examples <https://github.com/janestreet/jbuilder/tree/master/example>`__ for
+complete examples of projects using Jbuilder.
 
 Building a hello world program
 ==============================
