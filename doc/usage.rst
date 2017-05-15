@@ -316,27 +316,27 @@ description of an opam switch, as follows:
    the selected context for ``merlin`` will be ``(context default)``
    if present. Otherwise Jbuilder won't generate ``.merlin`` files
 
-Building JavaScript with ``js_of_ocaml``
-========================================
+Building JavaScript with js_of_ocaml
+====================================
 
 Jbuilder knows how to generate a JavaScript version of an executable
-(``<name>.bc.js``) using the js\ :sub:`ofocaml` compiler (the
-``js_of_ocaml-compiler`` opam package must be installed).
+(``<name>.bc.js``) using the js_of_ocaml compiler (the ``js_of_ocaml-compiler``
+opam package must be installed).
 
 It supports two modes of compilation:
 
--  Direct compilation of a bytecode program to JavaScript. This mode
-   allows js\ :sub:`ofocaml` to perform whole program deadcode
-   elimination and whole program inlining.
--  Separate compilation, where compilation units are compiled to
-   JavaScript separately and then linked together. This mode is useful
-   during development as it builds more quickly.
+- Direct compilation of a bytecode program to JavaScript. This mode allows
+  js_of_ocaml to perform whole program deadcode elimination and whole program
+  inlining.
+- Separate compilation, where compilation units are compiled to JavaScript
+  separately and then linked together. This mode is useful during development as
+  it builds more quickly.
 
 The separate compilation mode will be selected when passing ``--dev`` to
 jbuilder. There is currently no other way to control this behaviour.
 
-See the *section about js\ :sub:`ofocaml`* for passing custom flags to
-the js\ :sub:`ofocaml` compiler
+See the *section about js_of_ocalm* for passing custom flags to the js_of_ocaml
+compiler
 
 Using topkg with jbuilder
 =========================

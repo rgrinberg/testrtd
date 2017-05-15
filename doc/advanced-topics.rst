@@ -40,11 +40,11 @@ its generated ``META`` contents in place of this line.
 Using a custom ppx driver
 =========================
 
-You can use a custom ppx driver by putting it as the last library in
-``(pps ...)`` forms. An example of alternative driver is
-`ppx\ :sub:`driver` <https://github.com/janestreet/ppx_driver>`__. To
-use it instead of ``ocaml-migrate-parsetree.driver-main``, simply write
-``ppx_driver.runner`` as the last library:
+You can use a custom ppx driver by putting it as the last library in ``(pps
+...)`` forms. An example of alternative driver is `ppx_driver
+<https://github.com/janestreet/ppx_driver>`__. To use it instead of
+``ocaml-migrate-parsetree.driver-main``, simply write ``ppx_driver.runner`` as
+the last library:
 
 .. code:: scheme
 

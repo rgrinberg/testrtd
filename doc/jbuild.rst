@@ -136,7 +136,7 @@ modules you want.
    dependencies here. You don't need to do so unless you use Jbuilder to
    synthesize the ``depends`` and ``depopts`` sections of your opam file
 
--  ``js_of_ocaml``. See the *section about js\ :sub:`ofocaml`*
+-  ``js_of_ocaml``. See the *section about js_of_ocaml*
 
 -  ``flags``, ``ocamlc_flags`` and ``ocamlopt_flags``. See the
    *section about specifying OCaml flags*
@@ -187,13 +187,12 @@ format of executable stanzas is as follows:
       ))
 
 ``<name>`` is a module name that contains the main entry point of the
-executable. There can be additional modules in the current directory,
-you only need to specify the entry point. Given an ``executable``
-stanza with ``(name <name>)``, Jbuilder will know how to build
-``<name>.exe``, ``<name>.bc`` and ``<name>.bc.js``. ``<name>.exe`` is
-a native code executable, ``<name>.bc`` is a bytecode executable
-which requires ``ocamlrun`` to run and ``<name>.bc.js`` is a
-JavaScript generated using js\ :sub:`ofocaml`.
+executable. There can be additional modules in the current directory, you only
+need to specify the entry point. Given an ``executable`` stanza with ``(name
+<name>)``, Jbuilder will know how to build ``<name>.exe``, ``<name>.bc`` and
+``<name>.bc.js``. ``<name>.exe`` is a native code executable, ``<name>.bc`` is a
+bytecode executable which requires ``ocamlrun`` to run and ``<name>.bc.js`` is a
+JavaScript generated using js_of_ocaml.
 
 Note that in case native compilation is not available, ``<name>.exe``
 will in fact be a custom byte-code executable. Custom in the sense of
@@ -232,7 +231,7 @@ such you can always rely on ``<name>.exe`` being available.
 -  ``(preprocessor_deps (<deps-conf list>))`` is the same as the
    ``(preprocessor_deps ...)`` field of *libraries*
 
--  ``js_of_ocaml``. See the *section about js\ :sub:`ofocaml`*
+-  ``js_of_ocaml``. See the *section about js_of_ocaml*
 
 -  ``flags``, ``ocamlc_flags`` and ``ocamlopt_flags``. See the
    *section about specifying OCaml flags*
@@ -768,8 +767,8 @@ passed to Jbuilder. As a result it is recommended to write
 js_of_ocaml
 -----------
 
-In ``library`` and ``executables`` stanzas, you can specify Js\ :sub:`ofocaml`
-options using ``(js_of_ocaml (<js_of_ocaml-options>))``.
+In ``library`` and ``executables`` stanzas, you can specify js_of_ocaml options
+using ``(js_of_ocaml (<js_of_ocaml-options>))``.
 
 ``<js_of_ocaml-options>`` are all optional:
 
@@ -878,8 +877,9 @@ OCaml syntax
 If a ``jbuild`` file starts with ``(* -*- tuareg -*- *)``, then it is
 interpreted as an OCaml script that generates the ``jbuild`` file as described
 in the rest of this section. The code in the script will have access to a
-`Jbuild\ :sub:`plugin` <../plugin/jbuild_plugin.mli>`__ module containing
-details about the build context it is executed in.
+`Jbuild_plugin
+<https://github.com/janestreet/jbuilder/blob/master/plugin/jbuild_plugin.mli>`__
+module containing details about the build context it is executed in.
 
 The script can use the directive ``#require`` to access libraries:
 
